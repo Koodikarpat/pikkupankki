@@ -1,2 +1,0 @@
-# pikkupankki
-Renes' teams creation
