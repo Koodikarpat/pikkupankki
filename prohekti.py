@@ -14,7 +14,7 @@ def otaMaara(raakaTeksti):
     return raakaTeksti[getIndex(raakaTeksti)+1:]
 
 def muutaMaara(raakaTeksti, uusi):
-    return raakaTeksti[:getIndex(raakaTeksti)] + ": " + str(uusi) + "/n"
+    return raakaTeksti[:getIndex(raakaTeksti)] + ": " + str(uusi) + "\n"
 
 # lyukee tiedoston läpi ja etsii halutun henkilön. jos ei löydy lisää henkilön listaan. 
 # käy tiedoston läpi ja katsoo onko siellä tiettyä nimeä ja kertoo sen r0ahamäärän#
@@ -24,21 +24,21 @@ def muutaMaara(raakaTeksti, uusi):
 
 def nimihaku(nimi):
     nimilöyty = False
-    avaus = open('C:/Users/OMISTAJA/Documents/pikkupankki/testii.txt','r')
+    avaus = open('C:/Users/Niklas Leppälä/Documents/kk2018/pikkupankki/testii.txt','r')
     for i in avaus.readlines():
         if otaNimi(i) == nimi:
             nimilöyty = True
             print(i)
     avaus.close()
     if nimilöyty == False:
-        appendFile = open('C:/Users/OMISTAJA/Documents/pikkupankki/testii.txt','a')
+        appendFile = open('C:/Users/Niklas Leppälä/Documents/kk2018/pikkupankki/testii.txt','a')
         appendFile.write("\n"+nimi+":0")
         appendFile.close()
 # nimihaku("antti")
 
 def nimiJaArvo(nimi):
     nimilöyty1 = False
-    avaus1 = open('C:/Users/OMISTAJA/Documents/pikkupankki/testii.txt','r')
+    avaus1 = open('C:/Users/Niklas Leppälä/Documents/kk2018/pikkupankki/testii.txt','r')
     for i in avaus1.readlines():
         if otaNimi(i) == nimi:
             nimilöyty1 = True
@@ -60,7 +60,7 @@ def nimiJaArvo(nimi):
 
 def nimihaku2(nimi):
     nimilöyty2 = False
-    avaus2 = open('C:/Users/OMISTAJA/Documents/pikkupankki/testii.txt','r')
+    avaus2 = open('C:/Users/Niklas Leppälä/Documents/kk2018/pikkupankki/testii.txt','r')
     for i in avaus2.readlines():
         if otaNimi(i) == nimi:
             nimilöyty2 = True
@@ -73,14 +73,15 @@ def listavastaanotto(arvo):
     tekstimuoto = ""
     for i in arvo:
         tekstimuoto += i
-    kirjotus = open('C:/Users/OMISTAJA/Documents/pikkupankki/testii.txt','w')
+    kirjotus = open('C:/Users/Niklas Leppälä/Documents/kk2018/pikkupankki/testii.txt','w')
     kirjotus.write(tekstimuoto)
     kirjotus.close()
 
 def nimiarvovast(arvo, nimi):
     tekstiLista = ['']
-    lue = open('C:/Users/OMISTAJA/Documents/pikkupankki/testii.txt','r')
+    lue = open('C:/Users/Niklas Leppälä/Documents/kk2018/pikkupankki/testii.txt','r')
     for i in lue.readlines():
+        
         if otaNimi(i) == nimi:
             i = muutaMaara(i, arvo)
         tekstiLista.append(i)

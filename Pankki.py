@@ -1,18 +1,21 @@
 import sys
+from test import rahanlisays
 def tallentaminen(nimi):
     while True:
         userInput3 = int(input("Anna summa: "))
         if userInput3 > 0:
-            mockuplisaus(nimi, userInput3)
+            rahanlisays(userInput3, nimi)
             break
 
+from test import rahanvahennys
 def nostaminen(nimi):
     while True:
         userInput4 = int(input("Anna summa: "))
         if userInput4 > 0:
-            mockupnosto(nimi, userInput4)
+            rahanvahennys(userInput4, nimi)
             break
 
+from test import rahansiirto
 def siirtaminen(nimi):
     while True:
         userInput5 = input ("Anna saajan nimi: ")
@@ -22,8 +25,9 @@ def siirtaminen(nimi):
             while True:
                 userInput6 = int(input("Anna summa:"))
                 if userInput6 > 0:
-                    mockupsiirto(nimi, userInput5)
+                    rahansiirto(nimi, userInput5, userInput6)
                     break
+            break
 
 def lopeta():
     sys.exit()
@@ -33,10 +37,13 @@ def vaihtoehdot(nimi):
         userInput2 = input("Anna komento: talleta, nosta, siirra, lopeta: ")
         if userInput2 == "talleta":
             tallentaminen(nimi)
+            lopeta()
         if userInput2 == "nosta":
             nostaminen(nimi)
+            lopeta()
         if userInput2 == "siirra":
             siirtaminen(nimi)
+            lopeta()
         if userInput2 == "lopeta":
             lopeta()
 

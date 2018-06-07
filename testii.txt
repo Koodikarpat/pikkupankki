@@ -1,6 +1,6 @@
-Oskari: 0
+Oskari: 1008
 Ismael: 1000000
-Niklas: 1
-Rene: 99999999999999999
+Niklas: 11
+Rene: 99999999999999996
 Kalle: 25
 Samuel: 100

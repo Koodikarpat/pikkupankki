@@ -3,8 +3,9 @@ from prohekti import nimiJaArvo, nimiarvovast
 def rahanlisays(maara, nimi):
     tilinMaara = int(nimiJaArvo(nimi))
     tilinMaara = tilinMaara + maara
+    print(tilinMaara)
     print("Uusi määrä tilillä on " + str(tilinMaara))
-    nimiarvovast(nimi, tilinMaara)
+    nimiarvovast(tilinMaara, nimi)
 
 def rahanvahennys(maara, nimi):
     tilinMaara = int(nimiJaArvo(nimi))
@@ -21,12 +22,7 @@ def rahansiirto(nimi1, nimi2, maara = 5):
     tilin2maara = int(nimiJaArvo(nimi2)) 
 
     if tilin1maara>=maara:
-        tilin2maara = tilin2maara + tilin1maara
-        nimiarvovast(nimi2, tilin2maara)
-        nimiarvovast(nimi1, tilin1maara-maara)
+        nimiarvovast(tilin2maara + maara, nimi2)
+        nimiarvovast(tilin1maara-maara, nimi1)
     else:
         print('tapahtuma hylätty')
-
-rahanlisays(20, "Oskari")
-rahanvahennys(20, "Samuel")
-rahansiirto('Kalle', 'Samuel', 20)
