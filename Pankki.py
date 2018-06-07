@@ -1,37 +1,42 @@
 import sys
-def tallentaminen():
+def tallentaminen(nimi):
     while True:
-        userInput3 = input("Anna summa: ")
+        userInput3 = int(input("Anna summa: "))
         if userInput3 > 0:
-            mockuplisaus(userInput3)
+            mockuplisaus(nimi, userInput3)
             break
 
-def nostaminen():
+def nostaminen(nimi):
     while True:
-        userInput4 = input("Anna summa: ")
+        userInput4 = int(input("Anna summa: "))
         if userInput4 > 0:
-            mockupnosto(userInput4)
+            mockupnosto(nimi, userInput4)
             break
 
-def siirtaminen():
+def siirtaminen(nimi):
     while True:
-        userInput5 = input("Anna summa")
-        if userInput5 > 0:
-            mockupsiirto(userInput5)
-            break
+        userInput5 = input ("Anna saajan nimi: ")
+        if userInput5 == "":
+            pass
+        else:
+            while True:
+                userInput6 = int(input("Anna summa:"))
+                if userInput6 > 0:
+                    mockupsiirto(nimi, userInput5)
+                    break
 
 def lopeta():
     sys.exit()
 
-def vaihtoehdot():
+def vaihtoehdot(nimi):
     while True:
         userInput2 = input("Anna komento: talleta, nosta, siirra, lopeta: ")
         if userInput2 == "talleta":
-            tallentaminen()
+            tallentaminen(nimi)
         if userInput2 == "nosta":
-            nostaminen()
+            nostaminen(nimi)
         if userInput2 == "siirra":
-            siirtaminen()
+            siirtaminen(nimi)
         if userInput2 == "lopeta":
             lopeta()
 
@@ -48,7 +53,7 @@ while True:
             userInput1 = input("Anna salasana: ")
             if userInput1 == salasana:
                 print('Tervetuloa,'+ userInput0)
-                vaihtoehdot()
+                vaihtoehdot(userInput0)
                 break   
             else:
                 print("Vaara salasana!")
