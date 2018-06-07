@@ -1,4 +1,6 @@
-Kalle: 50
-Samuel: 20
 Oskari: 0
-Niklas: 0
+Ismael: 1000000
+Niklas: 1
+Rene: 99999999999999999
+Kalle: 25
+Samuel: 100
