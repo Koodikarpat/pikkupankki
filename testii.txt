@@ -1,0 +1,2 @@
+Samuel: 100
+Oskari: 0
