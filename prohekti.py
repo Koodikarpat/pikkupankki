@@ -21,42 +21,42 @@ def otaMaara(raakaTeksti):
 
 def nimihaku(nimi):
     nimilöyty = False
-    avaus = open('D:/Lisäohjelmat/pythno/Lib/site-packages/testii.txt','r')
+    avaus = open('C:/Users/OMISTAJA/Documents/pikkupankki/testii.txt','r')
     for i in avaus.readlines():
         if otaNimi(i) == nimi:
             nimilöyty = True
             print(i)
     avaus.close()
     if nimilöyty == False:
-        appendFile = open('D:/Lisäohjelmat/pythno/Lib/site-packages/testii.txt','a')
+        appendFile = open('C:/Users/OMISTAJA/Documents/pikkupankki/testii.txt','a')
         appendFile.write("\n"+nimi+":0")
         appendFile.close()
-nimihaku("antti")
+# nimihaku("antti")
 
 def nimiJaArvo(nimi):
     nimilöyty1 = False
-    avaus1 = open('D:/Lisäohjelmat/pythno/Lib/site-packages/testii.txt','r')
+    avaus1 = open('C:/Users/OMISTAJA/Documents/pikkupankki/testii.txt','r')
     for i in avaus1.readlines():
         if otaNimi(i) == nimi:
             nimilöyty1 = True
-            print(otaMaara(i))
+            return int(otaMaara(i))
     avaus1.close()
 
-nimiJaArvo('Matias')
+# nimiJaArvo('Matias')
 
-teksti = 'Hieno teksti yeyeyeyee'
-uusKir = open('D:/Lisäohjelmat/pythno/Lib/site-packages/testii2.txt','w')
-uusKir.write(teksti)
-uusKir.close
+# teksti = 'Hieno teksti yeyeyeyee'
+# uusKir = open('D:/Lisäohjelmat/pythno/Lib/site-packages/testii2.txt','w')
+# uusKir.write(teksti)
+# uusKir.close
 
-luku = open('D:/Lisäohjelmat/pythno/Lib/site-packages/testii.txt','r')
-print(luku.readlines())
+# luku = open('D:/Lisäohjelmat/pythno/Lib/site-packages/testii.txt','r')
+# print(luku.readlines())
 
-tekst = 'arvo'
+# tekst = 'arvo'
 
 def nimihaku2(nimi):
     nimilöyty2 = False
-    avaus2 = open('D:/Lisäohjelmat/pythno/Lib/site-packages/testii.txt','r')
+    avaus2 = open('C:/Users/OMISTAJA/Documents/pikkupankki/testii.txt','r')
     for i in avaus2.readlines():
         if otaNimi(i) == nimi:
             nimilöyty2 = True

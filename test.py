@@ -1,21 +1,28 @@
+from prohekti import nimiJaArvo
+
 def rahanlisays(maara, nimi):
-    tilinmaara=maara+maara2
-    rahanlisays
+    tilinMaara = nimiJaArvo(nimi)
+    tilinMaara = tilinMaara + maara
+    print("Uusi määrä tilillä on " + str(tilinMaara))
 
 def rahanvahennys(maara, nimi):
-    if tilinmaara>0:
-    tilinmaara=maara-maara2
-        rahanvahennys
+    tilinMaara = nimiJaArvo(nimi)
+    uusiMaara = tilinMaara - maara
+    if uusiMaara>=0:
+        print('uusi määrä tilillä on ' + str(uusiMaara))
 
     else:
         print('tapahtuma hylätty')
 
-def rahansiirto(nimi1, nimi2, maara = 5):
-    tilin1maara = 4 # tähän funktio
-    tilin2maara = 0
+def rahansiirto(nimi, nimi2, maara = 5):
+    tilin1maara = nimiJaArvo(nimi)  # tähän funktio
+    tilin2maara = nimiJaArvo(nimi2) 
 
     if tilin1maara>=maara:
-        rahansiirto
+        tilin2maara = tilin2maara + tilin1maara
     else:
         print('tapahtuma hylätty')
 
+rahanlisays(20, "Oskari")
+rahanvahennys(20, "Samuel")
+rahansiirto('Kalle', 'Samuel', 20)

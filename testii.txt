@@ -1,0 +1,4 @@
+Kalle: 50
+Samuel: 20
+Oskari: 0
+Niklas: 0
